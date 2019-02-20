@@ -63,6 +63,9 @@ export default {
 </script>
 <style scoped>
     .top-bar{
+        position: fixed;
+        top: 0;
+        left: 0;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -71,6 +74,8 @@ export default {
         width:100%; 
         height:70px; 
         top:0;
+        z-index: 9999;
+        background-color: #fff;
     }
     .top-bar-city{
         display: flex;
