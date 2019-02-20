@@ -2,6 +2,19 @@
     <div>
         <div>
             <h2>This is Item2 just for test</h2>
+            <h2>This is Item2 just for test</h2>
+            <h2>This is Item2 just for test</h2>
+            <h2>This is Item2 just for test</h2>
+            <h2>This is Item2 just for test</h2>
+            <h2>This is Item2 just for test</h2>
+            <h2>This is Item2 just for test</h2>
+            <h2>This is Item2 just for test</h2>
+            <h2>This is Item2 just for test</h2>
+            <h2>This is Item2 just for test</h2>
+            <h2>This is Item2 just for test</h2>
+            <h2>This is Item2 just for test</h2>
+            <h2>This is Item2 just for test</h2>
+            <h2>This is Item2 just for test</h2>
         </div>
         <tab-bar v-bind:class="{'isItem2':isNowPage}"></tab-bar>
 
