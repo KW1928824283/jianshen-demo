@@ -1,0 +1,35 @@
+var tarBarData=[
+    {
+        'imgPath':'/static/img/logo.png',
+        'name':'团体课',
+        'isTip':true,
+        'TipText':'火热'
+    },
+    {
+        'imgPath':'static/img/logo.png',
+        'name':'团体课',
+        'isTip':true,
+        'TipText':'火热'
+    },
+    {
+        'imgPath':'static/img/logo.png',
+        'name':'团体课',
+        'isTip':true,
+        'TipText':'火热'
+    },
+    {
+        'imgPath':'static/img/logo.png',
+        'name':'团体课',
+        'isTip':true,
+        'TipText':'火热'
+    },
+    {
+        'imgPath':'static/img/logo.png',
+        'name':'团体课',
+        'isTip':true,
+        'TipText':'火热'
+    }
+]
+export{
+    tarBarData
+}
