@@ -1,6 +1,6 @@
 <template>
 
-    <div class="footer fixed">
+    <div class="footer">
         <ul>
             <li v-for="item in tabItems"> 
                                
@@ -34,8 +34,9 @@ export default {
 }
 </script>
 <style scoped>
+    .footer{width:100%; height:70px;position: fixed;bottom: 0;left: 0;}
     li a{display: inline-block; width: 100%; height:100%;}
-	.footer{width:100%; height:70px; bottom:0;}
+	
 	ul{display: flex; height:100%; line-height:50px;}
     ul li{flex: 1; background-color:#f1f1f1;}
     
@@ -43,6 +44,7 @@ export default {
     .tab-item{display: block;}
     .tab-icon{height: 35px;}
     .tab-name{height: 35px;margin-top: 0px; line-height: 30px;}
+    
     .isIndex li:first-child{background-color:#d3d3d3;}
 	.isIndex li:first-child a{color:#41b883;}
 
