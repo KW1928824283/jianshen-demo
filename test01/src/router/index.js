@@ -6,6 +6,7 @@ import Index from '../view/index/index'
 import Item2 from '../view/item2/index'
 import Item3 from '../view/item3/index'
 import VIP from '../view/vip/index'
+import Store from '../view/store/index' 
 Vue.use(Router)
 
 export default new Router({
@@ -33,7 +34,12 @@ export default new Router({
       name:'/VIP',
       component:VIP
     },
-    
+    //进入门店的路由
+    {
+      path:'/store',
+      name:'/store',
+      component:Store
+    },
     {
       path:'/footerBar',
       name:'footerBar',

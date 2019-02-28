@@ -19,10 +19,7 @@
                     <img-text></img-text>
                 </div>
                 
-                <div class="card">
-                    <span class="card-recommand">推荐门店</span>
-                    <span class="card-all">全部门店 ></span> 
-                </div>
+                
 
                 <div class="store-card">
                     <store-card></store-card>
@@ -95,21 +92,7 @@
     padding: 4.5rem .2rem 0  .2rem;
 }
 
-.card{
-    margin-top: 0.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 
-}
-.card-recommand{
-    font-size: .5rem;
-    font-weight: bold;
-}
-.card-all{
-    font-size: .3rem;
-    color: #ff4e00;
-}
 tab-bar{
     position: fixed;
     left: 0px;
