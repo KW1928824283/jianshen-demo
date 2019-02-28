@@ -1,62 +1,51 @@
 <template>
     
     <div class="top-bar">
-        <div class="top-bar-city">
-            {{city}}
-            <i v-bind:class="cityIcon +' city-icon'"></i>
+        <div class="top-bar-city" @click="showSide">
+            {{cityName}}
+            <i class="iconfont icon-30jiantouxiangxiafill  city-icon"></i>
         </div>
         <div class="top-bar-logo">
-            <img class="logo-img" v-bind:src="logoPath">
+            <img class="logo-img" src="/static/img/logo.png">
             <!-- {{logoPath}} -->
         </div>
         <div class="top-bar-right" v-on:click="scanClick">
             <div class="top-bar-right-scan-icon">
-                <i v-bind:class="iconPath + ' icon-icon'"></i>
+                <i class="iconfont icon-saoyisao  icon-icon"></i>
             </div>
             <div class="top-bar-right-scan-name">
-                {{scanName}}
+                分享
             </div>
         </div>
     </div>
 </template>
 <script>
-var Msg  = require('./config/TopBar.js')
-console.log(Msg)
-var topMsg = Msg.topMsg;
-console.log(topMsg)
+import store from '../store/index.js'
+
 export default {
     name:'TopBar',
     data(){
 
         // 请求定位服务
         return{
-            city:topMsg.city,
-            logoPath:topMsg.logoPath,
-            iconPath:topMsg.iconPath,
-            scanName:topMsg.scanName,
-            cityIcon:topMsg.cityIcon
+            // cityName:store.state.posCity.name,
+            // cityIcon:topMsg.cityIcon
+        }
+    },
+    computed:{
+        cityName:function(){
+            return store.state.posCity.name
         }
     },
     mounted:function(){
-        this.getLocalPostion()
+        // this.getLocalPostion()
     },
     methods:{
         scanClick:function(){
-            alert("扫一扫")
+            alert('分享')
         },
-        getLocalPostion:function(){
-            var success = {
-                'status':true,
-                'city':'西安市'
-            }
-            var fail = {
-                'status':false
-            }
-
-            if(fail.status){
-                this.city = success.city
-            }
-
+        showSide:function(){
+            store.dispatch('showSideBar')
         }
     }
 }
@@ -74,7 +63,7 @@ export default {
         width:100%; 
         height:70px; 
         top:0;
-        z-index: 9999;
+        z-index: 9;
         background-color: #fff;
     }
     .top-bar-city{

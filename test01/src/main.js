@@ -6,9 +6,11 @@ import router from './router'
 import VueSwiper from 'vue-awesome-swiper'
 import Slick from 'vue-slick'
 import './assets/iconfont/iconfont.css'
+import Vuex from 'vuex'
 Vue.config.productionTip = false
 Vue.use(VueSwiper)
 Vue.use(Slick)
+Vue.use(Vuex)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

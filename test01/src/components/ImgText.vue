@@ -1,17 +1,37 @@
 <template>
-    <div class="container">
+    <div class="container" @click="navTo">
         <img class="img"  :src="imgSrc">
         <span class="text">{{imgText}}</span>
     </div>    
 </template>
 
 <script>
+import store from '../store/index.js'
 export default {
     name:'ImgText',
     data(){
         return{
-            imgSrc:'https://img.leoao.com/Ozb51e421546073947',
-            imgText : "为你推荐"
+            imgSrc:'',
+            imgText : "为你推荐",
+            
+        }
+    },
+    mounted:function(){
+        this.setData()
+    },
+    methods:{
+        setData:function(){
+            var imgSrc = 'https://img.leoao.com/Ozb51e421546073947'
+            
+            this.imgSrc = imgSrc 
+        },
+        navTo:function(){
+            this.$router.push({
+                name:'/VIP',
+                params:{
+                    userMsg:store.state.userMsg
+                }
+            })
         }
     }
 }
